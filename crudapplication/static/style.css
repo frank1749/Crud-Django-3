@@ -1,0 +1,25 @@
+table{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid lightgray;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn-primary{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 7px;
+}

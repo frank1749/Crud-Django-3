@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit</title>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static '/style.css' %}"/>
+</head>
+<body>
+
+    <h1>Update Details</h1>
+
+    <form method="POST" class="post-form" action="/update/{{employee.id}}">
+        {% csrf_token %}
+
+        <div class="container">           
+
+            <hr>
+
+            <div class="form-group">
+
+                <label for="">Employee Id:</label>
+                <div>                    
+                    <input type="text" name="eid" id="id_eid" required value="{{ employee.eid }}"> 
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="">Employee Name:</label>
+                <div>
+                    <input type="text" name="ename" id="id_ename" required value="{{ employee.ename }}"> 
+                </div>
+    
+            </div>
+
+            <div class="form-group">
+
+                <label for="">Employee Email:</label>
+                <div>
+                    <input type="text" name="eemail" id="id_eemail" required value="{{ employee.eemail }}"> 
+                </div>
+    
+            </div>
+
+            <div class="form-group">
+
+                <label for="">Employee Contact:</label>
+                <div>
+                    <input type="text" name="econtact" id="id_econtact" required value="{{ employee.econtact }}">
+                </div>
+        
+            </div>
+
+            <div class="form-group">
+
+                <button type="submit" class="btn-primary">Submit</button>
+        
+            </div>
+    
+
+        </div>
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static '/style.css' %}"/>
+</head>
+<body>
+
+    <form method="POST" class="post-form" action="/emp">
+        {% csrf_token %}
+
+        <div class="container">
+
+            <h3>Enter Details</h3>
+
+            <hr>
+
+            <div class="form-group">
+
+                <label for="">Employee Id:</label>
+                <div>
+                    {{ form.eid }}
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="">Employee Name:</label>
+                <div>
+                    {{ form.ename }}
+                </div>
+    
+            </div>
+
+            <div class="form-group">
+
+                <label for="">Employee Email:</label>
+                <div>
+                    {{ form.eemail }}
+                </div>
+    
+            </div>
+
+            <div class="form-group">
+
+                <label for="">Employee Contact:</label>
+                <div>
+                    {{ form.econtact }}
+                </div>
+        
+            </div>
+
+            <div class="form-group">
+
+                <button type="submit" class="btn-primary">Submit</button>
+        
+            </div>
+    
+
+        </div>
+
+    </form>
+    
+</body>
+</html>
